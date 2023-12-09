@@ -7,9 +7,8 @@ import Home from "./Home";
 const Main = () =>{
     return(
         <View style={{marginTop: Constants.statusBarHeight, flexGrow:1}}>
-            {/* <Text>Rate Repository Application</Text>
-            <RepositorioList></RepositorioList> */}
-            <Home></Home>
+            <RepositorioList></RepositorioList>
+            
         </View>
     )
 }
