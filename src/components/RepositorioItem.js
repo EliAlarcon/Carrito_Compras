@@ -28,10 +28,9 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
         padding: 10,
-        paddingBottom: 5,
+        paddingBottom: 3,
         paddingTop: 5,
         alignItems: "center"
-        
     },
     marca: {
         fontWeight: "bold",

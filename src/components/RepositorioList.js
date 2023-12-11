@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, FlatList } from "react-native";
+import { Text, FlatList, ScrollView, SafeAreaView, StatusBar, View } from "react-native";
 import repositorio from "../data/repositorio.js";
 import RepositorioItem from "./RepositorioItem.js";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import Constants from 'expo-constants';
-import { Text, View } from "react-native";
+import { Switch, Text, View } from "react-native";
 import RepositorioList from "./RepositorioList";
 import Home from "./Home";
 import AppBar from "./AppBar";
