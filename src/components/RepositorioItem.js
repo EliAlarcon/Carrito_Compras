@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Button } from "react-native";
 import EstiloTexto from './EstiloTexto.js'
 
 const RepositorioItem = (props) => (
@@ -21,8 +21,12 @@ const RepositorioItem = (props) => (
             <Text>Almacenamiento: {props.almacenamiento}</Text>
             <Text>Precio: {props.precio}</Text>
         </View>
+        <View style={styles.boton}>
+            <Button title="Detalle Producto" />
+        </View>
     </View>
 )
+
 
 const styles = StyleSheet.create({
     container: {
@@ -30,7 +34,11 @@ const styles = StyleSheet.create({
         padding: 10,
         paddingBottom: 3,
         paddingTop: 5,
-        alignItems: "center"
+        alignItems: "center",
+        flexWrap: "wrap",
+        borderWidth: 0.5,
+        borderColor: '#a9a9a9',
+        borderRadius: 20
     },
     marca: {
         fontWeight: "bold",
@@ -41,6 +49,9 @@ const styles = StyleSheet.create({
         height: 180,
         marginRight: 8
     },
+    boton: {
+        color: '#000'
+    }
 })
 
 export default RepositorioItem

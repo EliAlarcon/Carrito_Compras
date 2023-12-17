@@ -5,14 +5,16 @@ import RepositorioItem from "./RepositorioItem.js";
 
 const RepositorioList = () => {
     return (
-        <FlatList data={repositorio}
-            ItemSeparatorComponent={() => <Text></Text>}
-            renderItem={({
-                item: repo }) => (
-                <RepositorioItem {...repo} />
-            )
-            }>
-        </FlatList>
+
+            <FlatList data={repositorio}
+                ItemSeparatorComponent={() => <View style={{ marginVertical: 5 }} />}
+                renderItem={({
+                    item: repo }) => (
+                    <RepositorioItem {...repo} />
+                )
+                }>
+            </FlatList>
+
     )
 }
 
