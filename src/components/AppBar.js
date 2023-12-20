@@ -1,11 +1,35 @@
 import React from "react";
 import theme from "./theme";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
-import EstiloTexto from "./EstiloTexto";
+import styles from "./StyleAppBar";
+import { Header } from "@rneui/base";
 
-const AppBar = () => {
+const AppBar = (props) => {
+
     return (
-        <View style={styles.container}>
+        <SafeAreaProvider>
+    <HeaderRNE
+      leftComponent={{
+        icon: 'menu',
+        color: '#fff',
+      }}
+      rightComponent={
+          <View style={styles.headerRight}>
+            <TouchableOpacity onPress={docsNavigate}>
+              <Icon name="description" color="white" />
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{ marginLeft: 10 }}
+              onPress={playgroundNavigate}
+            >
+              <Icon type="antdesign" name="rocket1" color="white" />
+            </TouchableOpacity>
+          </View>
+      }
+      centerComponent={{ text: 'Header', style: styles.heading }}
+    />
+  </SafeAreaProvider>
+        {/* <View style={styles.container}>
             <TouchableOpacity>
                 <EstiloTexto fontWeight='bold' style={styles.text}>
                     Catálogo Celulares
@@ -21,23 +45,11 @@ const AppBar = () => {
                     Login
                 </EstiloTexto>
             </TouchableOpacity>
-        </View>
+        </View> */}
+        <Header />
     )
 }
 
 
-const styles = StyleSheet.create({
-    container: {
-        flexDirection: "row",
-        backgroundColor: theme.appBar.primary,
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 10,
-    },
-    text: {
-        color: theme.appBar.textPrimary,
-        paddingHorizontal: 10
-    }
-})
 
 export default AppBar
