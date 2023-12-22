@@ -12,6 +12,12 @@ const InicioSesion = ({ navigation }) => {
     navigation.navigate('Productos');
   };
 
+  const registro = () => {
+    // Lógica para verificar las credenciales, por ejemplo, hacer una solicitud a un servidor
+    // Si las credenciales son válidas, navegar a la siguiente pantalla
+    navigation.navigate('RegistroUsuario');
+  };
+
   return (
       <View style={styles.container}>
         <Text>Iniciar Sesión</Text>
@@ -29,6 +35,7 @@ const InicioSesion = ({ navigation }) => {
           style={styles.input}
         />
         <Button title="Iniciar Sesión" onPress={iniciarSesion} />
+        <Button title="Registrarse" onPress={registro}/>
       </View>
   );
 };

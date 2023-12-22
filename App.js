@@ -7,6 +7,7 @@ import RepositorioItem from './src/components/Producto/RepositorioItem';
 import DetalleProductoScreen from './src/components/DetalleProductoScreen';
 import HomeScreen from './src/components/HomeScreen';
 import InicioSesion from './src/components/InicioSesionScreen';
+import RegistroScreen from './src/components/RegistoScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name='Home' component={HomeScreen}/>
         <Stack.Screen name='InicioSesion' component={InicioSesion}/>
+        <Stack.Screen name='RegistroUsuario' component={RegistroScreen}/>
         <Stack.Screen name='Productos' component={RepositorioList} />
         <Stack.Screen name="DetalleProducto" component={DetalleProductoScreen} />
         <Stack.Screen name="Carrito" component={CarritoCompras} />
