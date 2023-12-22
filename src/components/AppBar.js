@@ -7,28 +7,7 @@ import { Header } from "@rneui/base";
 const AppBar = (props) => {
 
     return (
-        <SafeAreaProvider>
-    <HeaderRNE
-      leftComponent={{
-        icon: 'menu',
-        color: '#fff',
-      }}
-      rightComponent={
-          <View style={styles.headerRight}>
-            <TouchableOpacity onPress={docsNavigate}>
-              <Icon name="description" color="white" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{ marginLeft: 10 }}
-              onPress={playgroundNavigate}
-            >
-              <Icon type="antdesign" name="rocket1" color="white" />
-            </TouchableOpacity>
-          </View>
-      }
-      centerComponent={{ text: 'Header', style: styles.heading }}
-    />
-  </SafeAreaProvider>
+        
         {/* <View style={styles.container}>
             <TouchableOpacity>
                 <EstiloTexto fontWeight='bold' style={styles.text}>
@@ -46,7 +25,6 @@ const AppBar = (props) => {
                 </EstiloTexto>
             </TouchableOpacity>
         </View> */}
-        <Header />
     )
 }
 

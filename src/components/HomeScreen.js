@@ -1,16 +1,27 @@
+import { useNavigation } from "@react-navigation/native";
+import { Button } from "@rneui/base";
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const Home = () =>{
+const HomeScreen = () =>{
+  
+  //Obtenemos el objeto de navegación
+  const navigation = useNavigation();
+
+  const iniciarSesion = () =>{
+    navigation.navigate('InicioSesion');
+  };
+
     return(
-        <View style={styles.encabezado}>
+        <View>
             <Text style={flattenStyle}>CeluQuito</Text>
             <Image style={styles.portada} source={{uri: 'https://th.bing.com/th/id/OIP.vNd3X8ldrU2xXqZwL6I3dQHaD4?rs=1&pid=ImgDetMain'}}></Image>
+            <Button title="Iniciar Sesión" onPress={iniciarSesion} buttonStyle={styles.boton}></Button>
         </View>
     )
 }
 
-export default Home
+export default HomeScreen
 
 
 const styles = StyleSheet.create({
@@ -31,7 +42,13 @@ const styles = StyleSheet.create({
       },
       encabezado:{
         backgroundColor: '#f5f5f5',
-      }
+      },
+      boton: {
+        backgroundColor: '#4c5155',
+        borderWidth: 2,
+        borderColor: 'white',
+        borderRadius: 30,
+    }
 })
 
 const flattenStyle = StyleSheet.create([styles.text, styles.header])

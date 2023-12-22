@@ -26,13 +26,13 @@ const RepositorioItem = (props) => {
             )}
             <View>
                 <CardTitle fontSize='subheading' fontWeight='bold'>{props.marca} {props.modelo}</CardTitle>
-                <Text>Año lanzamiento: {props.lanzamiento}</Text>
+                {/* <Text>Año lanzamiento: {props.lanzamiento}</Text> */}
                 <Text>Pantalla tipo: {props.pantalla.tipo}</Text>
-                <Text>Tamaño de la pantalla: {props.pantalla.tamano}</Text>
+                {/* <Text>Tamaño de la pantalla: {props.pantalla.tamano}</Text> */}
                 <Text>Resolución cámara: {props.camara_principal.resolucion}</Text>
-                <Text>Apertura de cámara: {props.camara_principal.apertura}</Text>
+                {/* <Text>Apertura de cámara: {props.camara_principal.apertura}</Text> */}
                 <Text>Bateria: {props.bateria}</Text>
-                <Text>Almacenamiento: {props.almacenamiento}</Text>
+                <Text>Almacenamiento: {props.almacenamiento}GB</Text>
                 <Text>Precio: {props.precio}</Text>
             </View>
             <View>
@@ -52,10 +52,6 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         alignItems: "center",
         flexWrap: "wrap",
-    },
-    marca: {
-        fontWeight: "bold",
-        marginBottom: 5
     },
     imagen: {
         width: 150,
